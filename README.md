@@ -3,7 +3,9 @@ Code sample for Ensemble
 
 # Installation instructions: 
 
-a config folder containing a config.json file should be created containing database information for a dev and test database ex: 
+- a config folder containing a config.json file should be created containing database information for a dev and test database
+
+Example: 
 ```
 {
     "dev":{
@@ -22,11 +24,12 @@ a config folder containing a config.json file should be created containing datab
       }
 }
 ```
-clone the repo locally
-run ```npm i``` from within the repo directory to install dependencies  
-run ```$node server.js``` from within the repo directory to start the server
+
+- clone the repo locally
+- run ```npm i``` from within the repo directory to install dependencies  
+- run ```node server.js``` from within the repo directory to start the server
 
 # Running tests:
 
-run ```npm test``` in order to run the automated tests
+- run ```npm test``` in order to run the automated tests
 
