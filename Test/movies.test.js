@@ -2,6 +2,7 @@ const request = require("supertest");
 const app = require("../server");
 
 //tests for GET routes
+
 describe("Movies", () => {
   describe("get all movies", () => {
     it("Should respond with a 200", async () => {
@@ -23,6 +24,7 @@ describe("Movies", () => {
 });
 
 //tests for POST routes
+
 describe("Movies", () => {
   describe("create new movie", () => {
     describe("given all attributes of a new movie", () => {

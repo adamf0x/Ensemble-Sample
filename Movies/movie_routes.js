@@ -3,7 +3,8 @@ var router = express.Router();
 const Movie = require("./Models/movie_model");
 const cache = require("./routeCache");
 
-//get routes for movies
+//get routes
+
 router.get("/", (req, res) => {
   res.send("Movies API");
 });
@@ -34,11 +35,13 @@ router.get("/searchMovieTitle", cache(30), (req, res) => {
 });
 
 //post routes
+
 router.post("/createMovie", cache(undefined, "del"), (req, res) => {
   let title = req.body.title;
   let description = req.body.description;
   let release_year = req.body.release_year;
   let duration = req.body.duration;
+  //ensure no movies with the same title already exist, then create a new movie
   Movie.findOne({ where: { title } })
     .then((movies) => {
       if (!movies) {
@@ -85,6 +88,7 @@ router.patch("/updateMovie/:id", cache(undefined, "del"), (req, res) => {
     });
 });
 
+//update a movies rating based on what is sent from the client who changed the rating
 router.patch("/updateMovieRating/:id", cache(undefined, "del"), (req, res) => {
   let rating = req.body.rating;
   let movieId = req.params.id;
