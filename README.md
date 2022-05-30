@@ -1,8 +1,9 @@
 # Ensemble-Sample
 Code sample for Ensemble 
 
-# Installation instructions: 
+# Installation instructions:
 
+- clone the repo locally
 - a config folder containing a config.json file should be created containing database information for a dev and test database
 
 Example: 
@@ -25,7 +26,6 @@ Example:
 }
 ```
 
-- clone the repo locally
 - run ```npm i``` from within the repo directory to install dependencies  
 - run ```node server.js``` from within the repo directory to start the server
 
